@@ -1,0 +1,16 @@
+<div class="col-lg-7 mt-lg-0 mt-3">
+  <p style="margin-top:100px;margin-bottom:50px;"><button (click)="onClick();" type="button" class="btn btn-primary ml-lg-5 w3ls-btn">Click me!</button></p>
+  <ul class="list-group" [style.display]="isDisplay ? 'block':'none'">
+    <li [class.list-group-item-danger]="isShow">{{greetHere}}</li>
+  </ul>
+  
+  <p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci. Nulla accumsan
+    ac elit in congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+  </p>
+  <p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci. Nulla accumsan
+    ac elit in congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+  </p>
+  <p>Event binding</p>
+  <p style="margin-top:100px;margin-bottom:50px;"><button (click)="greetHere='Hi what?'" type="button" class="btn btn-primary ml-lg-5 w3ls-btn">Check me!</button></p>
+  {{greetHere}}
+</div>

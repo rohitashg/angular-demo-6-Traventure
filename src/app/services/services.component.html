@@ -12,6 +12,13 @@
 <section class="wthree-row py-sm-5 py-3">
   <div class="container py-md-5 py-3">
     <div class="row py-lg-5 bg-pricemain">
+      <ul class="items">
+        <li  *ngFor="let ser of serviceArr">
+          <span class="badge">{{ser.id}}</span>
+          <a href="javascript:void(0);" class="text-success" (click)="onClick(ser)">{{ser.name}}</a>
+        </li>
+      </ul>
+
       <div class="col-lg-5">
         <h3 class="agile-title">travel specials</h3>
         <span class="w3-line"></span>

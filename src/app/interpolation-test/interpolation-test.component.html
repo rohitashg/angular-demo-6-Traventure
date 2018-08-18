@@ -1,0 +1,28 @@
+<div class="pb-5 typo-wthree">
+  <h3 class="agile-title">Welcome</h3>
+  <div class="d-flex p-2 bg-flex mb-1">I'm {{name}}!</div>
+  <div class="col-lg-7 mt-lg-0 mt-3">
+    <p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci. Nulla accumsan
+      ac elit in congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+  </div>
+  <div class="col-lg-7 mt-lg-0 mt-3">
+    <p>{{2+2}}</p>
+    <p>{{"Welcome" + ' ' + name}}</p>
+    <p>{{"Name Length is " + name.length}}</p>
+    <p>{{"Name Length in upper case is " +name.toUpperCase()}}</p>
+  </div>
+  <div class="col-lg-7 mt-lg-0 mt-3">
+    <p>Function example</p>
+    <p>{{greetUser()}}</p>
+  </div>
+
+  <div class="d-flex p-2 bg-flex mb-1">Limitation(you can not do in interpolation)</div>
+  <div class="col-lg-7 mt-lg-0 mt-3">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-danger">Assignment are not possible like.[a=a+c}</li>      
+      <li class="list-group-item list-group-item-danger">you can not access global javascript variables. Template is not global to access window variable like.(window.location.href] </li>      
+      <li class="list-group-item list-group-item-success">If we need to access window variable we have to bind that varible example below</li>      
+      <li class="list-group-item list-group-item-success">write code in component siteUrl=window.location.href = {{siteUrl}}</li>      
+    </ul>
+  </div>
+</div>

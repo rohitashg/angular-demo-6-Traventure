@@ -1,0 +1,58 @@
+<div class="d-flex p-2 bg-flex mb-1">Lets Learn about directivs</div>
+  <div class="col-lg-7 mt-lg-0 mt-3">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-danger">ngIf</li>
+      <li class="list-group-item list-group-item-danger">ngSwitch</li>
+      <li class="list-group-item list-group-item-danger">ngFor</li>      
+    </ul>
+  </div>
+  <h3>ngIf examples START</h3>
+  <div class="col-lg-7 mt-lg-0 mt-3" *ngIf="isDisplay; else elseBlock">
+    <p> If block call</p>
+  </div>
+  <ng-template #elseBlock>
+  <div class="col-lg-7 mt-lg-0 mt-3">
+    <p> else block call </p>
+  </div>
+  </ng-template>
+<h3>Other example</h3>
+  <h3 *ngIf="isDisplay; then thenBlock; else elseBlock2">Other example</h3>
+  <ng-template #thenBlock>
+    <div class="col-lg-7 mt-lg-0 mt-3">
+      <p> else block call </p>
+    </div>
+  </ng-template>
+
+  <ng-template #elseBlock2>
+    <div class="col-lg-7 mt-lg-0 mt-3">
+      <p> else block call </p>
+    </div>
+  </ng-template>
+  <h3>ngIf examples END</h3>
+  <br/>
+  <br/>
+  <br/>
+  <h3>ngSwitch examples START</h3>
+  <div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You picked red color</div>
+    <div *ngSwitchCase="'blue'">You picked blue color</div>
+    <div *ngSwitchCase="'black'">You picked black color</div>
+    <div *ngSwitchDefault>You are color color-blind</div>
+  </div>
+  <h3>ngSwitch examples END</h3>
+  <br/>
+  <br/>
+  <br/>
+  <h3>ngFor examples START</h3>
+  <div *ngFor="let color1 of colors; index as i">
+    <div>{{i}} - You picked {{color1}} color</div>    
+  </div>
+<p>first as f </p>
+  <div *ngFor="let color1 of colors; first as f">
+    <div>{{f}} - You picked {{color1}} color</div>    
+  </div>
+<p> last as l</p>
+  <div *ngFor="let color1 of colors; last as l">
+    <div>{{l}} - You picked {{color1}} color</div>    
+  </div>
+  <h3>ngSwitch examples END</h3>

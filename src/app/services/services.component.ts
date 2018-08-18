@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule,Router } from '@angular/router';
 
 @Component({
   selector: 'app-services',
@@ -8,9 +8,21 @@ import { Routes, RouterModule } from '@angular/router';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor() { }
+  public serviceArr = [
+    {id:1,"name":"rohit"},
+    {id:2,"name":"sohit"},
+    {id:3,"name":"kohit"},
+    {id:4,"name":"mohit"},
+    {id:5,"name":"pohit"},
+  ];
+  constructor(private router:Router) { }  
 
   ngOnInit() {
+  }
+
+  onClick(services){
+    console.log(services.id);
+    this.router.navigate(['/service',services.id]);
   }
 
 }
