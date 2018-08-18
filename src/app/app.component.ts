@@ -8,4 +8,5 @@ import { Routes, RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-demo';
+  public name="rohit";
 }

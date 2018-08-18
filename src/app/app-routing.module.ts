@@ -13,6 +13,7 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TemplateReferenceVariablesComponent } from './template-reference-variables/template-reference-variables.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { DriectivesComponent } from './driectives/driectives.component';
+import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
 
  
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path:'about.html',component:AboutUsComponent},
   { path:'interpolation',component:InterpolationTestComponent},
   { path:'class-binding',component:ClassBindingComponent},
+  { path:'component-interaction',component:ComponentInteractionComponent},
   { path:'two-way-binding',component:TwoWayBindingComponent},
   { path:'directive-examples',component:DriectivesComponent},
   { path:'template-reference-variables',component:TemplateReferenceVariablesComponent},
