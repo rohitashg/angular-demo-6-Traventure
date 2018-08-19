@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { AngularFireModule } from 'angularfire2';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
+
 import { AboutUsComponent } from './about-us/about-us.component'; 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -19,6 +21,21 @@ import { TemplateReferenceVariablesComponent } from './template-reference-variab
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { DriectivesComponent } from './driectives/driectives.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
+import { TypographyComponent } from './typography/typography.component';
+import { QueriesComponent } from './queries/queries.component';
+import { LoginComponent } from './login/login.component';
+import { EmailComponent } from './email/email.component';
+import { SignupComponent } from './signup/signup.component';
+import { MembersComponent } from './members/members.component';
+
+export const firebaseconfig = {
+  apiKey: "AIzaSyBTI6BgBKRyyrBIseqX0glKXyHMFvYfL_0",
+  authDomain: "angular6firebasedemo.firebaseapp.com",
+  databaseURL: "https://angular6firebasedemo.firebaseio.com",
+  projectId: "angular6firebasedemo",
+  storageBucket: "angular6firebasedemo.appspot.com",
+  messagingSenderId: "66259121643"
+};
 
 @NgModule({
   declarations: [
@@ -36,12 +53,20 @@ import { ComponentInteractionComponent } from './component-interaction/component
     TemplateReferenceVariablesComponent,
     TwoWayBindingComponent,
     DriectivesComponent,
-    ComponentInteractionComponent    
+    ComponentInteractionComponent,
+    TypographyComponent,
+    QueriesComponent,
+    LoginComponent,
+    EmailComponent,
+    SignupComponent,
+    MembersComponent    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule    
+    HttpModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseconfig)    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,11 +14,13 @@ import { TemplateReferenceVariablesComponent } from './template-reference-variab
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { DriectivesComponent } from './driectives/driectives.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
-
+import { TypographyComponent } from './typography/typography.component';
+import { QueriesComponent } from './queries/queries.component';
  
 const routes: Routes = [
   { path:'',redirectTo:'home.html',pathMatch:'full'},
   { path:'about.html',component:AboutUsComponent},
+  { path:'typo.html',component:TypographyComponent},
   { path:'interpolation',component:InterpolationTestComponent},
   { path:'class-binding',component:ClassBindingComponent},
   { path:'component-interaction',component:ComponentInteractionComponent},
@@ -29,6 +31,7 @@ const routes: Routes = [
   { path:'property-binding',component:PropertyBindingComponent},
   { path:'service/:id',component:ServiceDetailComponent},
   { path:'home.html',component:HomeComponent},
+  { path:'queries',component:HomeComponent},
   { path:'services.html',component:ServicesComponent},
   { path:'gallery.html',component:GalleryComponent},
   { path:'**',component:PageNotFoundComponent},
