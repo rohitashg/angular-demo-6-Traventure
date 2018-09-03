@@ -1,0 +1,38 @@
+<h2>User list</h2>
+<table class="table table-bordered table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Is email Verified</th>
+        <th scope="col">Status</th>
+        <th scope="col">Created</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userlist.data let i = index">
+        <th scope="row">
+          <a (click)="view_user($event, user)" href="javascript:void(0);" class="mini blue-stripe" >{{i+1}}</a>
+        </th>
+        <th scope="row">
+            <a href="javascript:void(0);" class="mini blue-stripe">
+                <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar">
+            </a>
+          </th>
+        <td>
+            <a href="javascript:void(0);" class="mini blue-stripe">
+                {{user.name}}
+            </a>
+        </td>
+        <td>{{user.email}}</td>
+        <td>{{user.is_email_verified}}</td>
+        <td>{{user.status}}</td>
+        <td>{{user.created}}</td>
+        <td><a href="javascript:void(0);" class="btn mini blue-stripe">Edit</a></td>
+        <td><a href="javascript:void(0);" class="confirm-delete btn mini red-stripe" role="button">Delete</a></td>
+      </tr>     
+    </tbody>
+  </table>
+  
+  

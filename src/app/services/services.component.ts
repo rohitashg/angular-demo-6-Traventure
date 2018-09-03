@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule,Router } from '@angular/router';
+import { ShareServicesService } from '../share-services.service';
 
 @Component({
   selector: 'app-services',
@@ -15,13 +16,15 @@ export class ServicesComponent implements OnInit {
     {id:4,"name":"mohit"},
     {id:5,"name":"pohit"},
   ];
-  constructor(private router:Router) { }  
+  public shareservice = [];
+  constructor(private router:Router,private _service:ShareServicesService) { }  
 
   ngOnInit() {
+    this.shareservice = this._service.getServices();
+    console.log(this.shareservice);
   }
 
-  onClick(services){
-    console.log(services.id);
+  onClick(services){    
     this.router.navigate(['/service',services.id]);
   }
 

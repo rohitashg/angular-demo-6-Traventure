@@ -28,6 +28,14 @@
           ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>
       </div>
     </div>
+
+    <ul class="items">
+      <li  *ngFor="let serbic of shareservice">
+        <span class="badge">{{serbic.id}}</span>
+        <a href="javascript:void(0);" class="text-success" (click)="onClick(serbic)">{{serbic.name}}</a>
+      </li>
+    </ul>
+    
     <div class="row py-5 d-flex justify-content-center">
       <div class="card col-lg-3 col-md-6 border-0">
         <img class="card-img-top" src="assets/images/s1.jpg" alt="Card image cap">
@@ -178,4 +186,5 @@
     </div>
   </div>
 </section>
+
 <!-- pricing -->

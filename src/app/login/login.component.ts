@@ -4,7 +4,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase, AngularFireObject, AngularFireList } from 'angularfire2/database';
 import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { Router } from '@angular/router';
-import { moveIn } from '../router.animations';
+//import { moveIn } from '../router.animations';
 
 
 
@@ -12,8 +12,8 @@ import { moveIn } from '../router.animations';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  animations: [moveIn()],
-  host: {'[@moveIn]': ''}
+  //animations: [moveIn()],
+  //host: {'[@moveIn]': ''}
 })
 export class LoginComponent implements OnInit {
 

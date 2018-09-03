@@ -16,6 +16,10 @@ import { DriectivesComponent } from './driectives/driectives.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
 import { TypographyComponent } from './typography/typography.component';
 import { QueriesComponent } from './queries/queries.component';
+import { PipsComponent } from './pips/pips.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { UsersComponent } from './users/users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component'
  
 const routes: Routes = [
   { path:'',redirectTo:'home.html',pathMatch:'full'},
@@ -34,6 +38,10 @@ const routes: Routes = [
   { path:'queries',component:HomeComponent},
   { path:'services.html',component:ServicesComponent},
   { path:'gallery.html',component:GalleryComponent},
+  { path:'pips',component:PipsComponent},
+  { path:'dependency-injection',component:DependencyInjectionComponent},
+  { path:'users',component:UsersComponent},
+  { path:'user-detail/:id',component:UserDetailComponent},
   { path:'**',component:PageNotFoundComponent},
 
 ];

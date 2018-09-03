@@ -27,6 +27,12 @@ import { LoginComponent } from './login/login.component';
 import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { MembersComponent } from './members/members.component';
+import { PipsComponent } from './pips/pips.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { ShareServicesService } from './share-services.service';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 export const firebaseconfig = {
   apiKey: "AIzaSyBTI6BgBKRyyrBIseqX0glKXyHMFvYfL_0",
@@ -59,16 +65,21 @@ export const firebaseconfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
-    MembersComponent    
+    MembersComponent,
+    PipsComponent,
+    DependencyInjectionComponent,
+    UsersComponent,
+    UserDetailComponent        
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(firebaseconfig)    
+    AngularFireModule.initializeApp(firebaseconfig),
+    HttpClientModule    
   ],
-  providers: [],
+  providers: [ShareServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
