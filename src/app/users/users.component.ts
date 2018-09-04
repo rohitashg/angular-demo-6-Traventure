@@ -29,5 +29,11 @@ export class UsersComponent implements OnInit {
   public view_user(evt,user){
     this.router.navigate(['/user-detail/',user.id]);
   }
+  public edit_user(evt,user){
+    this.router.navigate(['/edit-user/',user.id]);
+  }
+  public delete(evt,user){
+    this.router.navigate(['/delete-user/',user.id]);
+  } 
 
 }

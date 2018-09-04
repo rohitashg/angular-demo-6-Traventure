@@ -33,6 +33,7 @@ import { ShareServicesService } from './share-services.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './users/users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 export const firebaseconfig = {
   apiKey: "AIzaSyBTI6BgBKRyyrBIseqX0glKXyHMFvYfL_0",
@@ -69,7 +70,8 @@ export const firebaseconfig = {
     PipsComponent,
     DependencyInjectionComponent,
     UsersComponent,
-    UserDetailComponent        
+    UserDetailComponent,
+    EditUserComponent        
   ],
   imports: [
     BrowserModule,

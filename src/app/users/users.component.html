@@ -29,8 +29,8 @@
         <td>{{user.is_email_verified}}</td>
         <td>{{user.status}}</td>
         <td>{{user.created}}</td>
-        <td><a href="javascript:void(0);" class="btn mini blue-stripe">Edit</a></td>
-        <td><a href="javascript:void(0);" class="confirm-delete btn mini red-stripe" role="button">Delete</a></td>
+        <td><a (click)="edit_user($event, user)" href="javascript:void(0);" class="btn mini blue-stripe">Edit</a></td>
+        <td><a (click)="delete($event, user)" href="javascript:void(0);" class="confirm-delete btn mini red-stripe" role="button">Delete</a></td>
       </tr>     
     </tbody>
   </table>

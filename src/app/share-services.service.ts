@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { IEmployee } from './employee';
 import { IUserList } from './iuser-list';
 import { Observable } from 'rxjs/Observable';
+import { User } from './user.modal';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
@@ -14,6 +15,9 @@ export class ShareServicesService {
     private _url:string = "assets/data/employees.json";    
     private _userListUrl:string = "http://localhost:3232/userList";
     private _detail_url:string = 'http://localhost:3232/getUserById';
+    private _update_url:string = 'http://localhost:3232/update';
+    user:User;
+    
     constructor(private http:HttpClient) { }
     getServices(){
       return [
@@ -48,8 +52,20 @@ export class ShareServicesService {
       return this.http.get<IUserList[]>(this._userListUrl)
                       .catch(this.errorHandler);
     }
-    viewUser(id):Observable<IUserList[]> {
-      return this.http.get<IUserList[]>(this._detail_url + '/' + id);
+    viewUser(id:string):Observable<IUserList> {
+      const url = `${this._detail_url}/${id}`;      
+      return this.http.get<IUserList>(url)
+                      .catch(this.errorHandler); 
+    }
+    updateUser(user:User):Observable<IUserList> {
+      // this.http.put<User>(this._update_url, user, httpOptions));
+
+
+
+
+      // const url = `${this._update_url}/${id}`;      
+      // return this.http.get<IUserList>(url)
+      //                 .catch(this.errorHandler); 
     }
     errorHandler(error:HttpErrorResponse){
       return Observable.throw(error.message || "server error")
